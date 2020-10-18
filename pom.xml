@@ -8,6 +8,8 @@
 	<packaging>pom</packaging>
 	<modules>
 		<module>spring-kafka-tutorials-comsumer</module>
+		<module>spring-kafka-tutorials-producer</module>
+		<module>spring-kafka-tutorials-model</module>
 	</modules>
 
 	<properties>
