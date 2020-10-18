@@ -1,0 +1,22 @@
+{
+	"type": "object",
+	"javaType": "learning.spring.kafka.tutorials.Employee",
+	"properties": {
+		"employeeId": {
+			"type": "number"
+		},
+		"firstName": {
+			"type": "string"
+		},
+		"lastName": {
+			"type": "string"
+		},
+		"department": {
+			"type": "string"
+		},
+		"dateOfBirth": {
+			"type": "string",
+			"format": "date"
+		}
+	}
+}
