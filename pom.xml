@@ -7,9 +7,9 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<modules>
-		<module>spring-kafka-tutorials-comsumer</module>
-		<module>spring-kafka-tutorials-producer</module>
 		<module>spring-kafka-tutorials-model</module>
+		<module>spring-kafka-tutorials-producer</module>
+		<module>spring-kafka-tutorials-comsumer</module>
 	</modules>
 
 	<properties>
@@ -17,8 +17,30 @@
 		<slf4j.version>1.7.30</slf4j.version>
 		<jackson.version>2.11.2</jackson.version>
 		<java.version>1.8</java.version>
+		<jackson-bind.version>2.9.9</jackson-bind.version>
+		<common-lang.version>2.6</common-lang.version>
+
 		<maven-complier-plugin.version>3.5.1</maven-complier-plugin.version>
+		<jsonschema2pojo.version>0.5.1</jsonschema2pojo.version>
 	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<!--Jackson Databind -->
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-databind</artifactId>
+				<version>${jackson-bind.version}</version>
+			</dependency>
+
+			<!--Apache commons -->
+			<dependency>
+				<groupId>commons-lang</groupId>
+				<artifactId>commons-lang</artifactId>
+				<version>${common-lang.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
 	<build>
 		<plugins>
