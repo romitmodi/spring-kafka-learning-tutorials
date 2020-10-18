@@ -29,7 +29,11 @@
 			<artifactId>slf4j-simple</artifactId>
 			<version>${slf4j.version}</version>
 		</dependency>
-
+		<dependency>
+			<groupId>learning.spring.kafka.tutorials</groupId>
+			<artifactId>spring-kafka-tutorials-model</artifactId>
+			<version>${project.version}</version>
+		</dependency>
 	</dependencies>
 
 </project>
