@@ -18,6 +18,7 @@ import org.springframework.kafka.core.ConsumerFactory;
 import org.springframework.kafka.core.DefaultKafkaConsumerFactory;
 import org.springframework.kafka.listener.ContainerProperties;
 import org.springframework.kafka.listener.KafkaMessageListenerContainer;
+import org.springframework.kafka.support.serializer.JsonDeserializer;
 
 import learning.spring.kafka.tutorials.listener.SpringKafkaListener;
 
@@ -41,6 +42,7 @@ public class SpringKafkaContext {
 		props.put(ConsumerConfig.GROUP_ID_CONFIG, env.getProperty("spring.kafka.group.id"));
 		props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
 		props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
+		props.put(JsonDeserializer.VALUE_TYPE_METHOD, String.class);
 		return new DefaultKafkaConsumerFactory<String, Object>(props);
 	}
 
